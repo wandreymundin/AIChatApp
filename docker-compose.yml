@@ -1,0 +1,18 @@
+services:
+  aichatapp:
+    build: .
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    profiles:
+      - dev
+
+  aichatapp-prod:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    profiles:
+      - prod
