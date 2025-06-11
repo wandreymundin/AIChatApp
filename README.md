@@ -1,6 +1,3 @@
-## 📄 `README.md` (com badges e visual GitHub-Friendly)
-
-```markdown
 # 🤖 AIChatApp – C# + OpenAI + Docker
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)
@@ -25,16 +22,16 @@
 
 ## 🚀 Execução com Docker
 
-### Clone o repositório:
+### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/aichatapp.git
+git clone https://github.com/wandreymundin/aichatapp.git
 cd aichatapp
 ```
 
-### Configure a chave da OpenAI:
+### 2. Configure a chave da OpenAI
 
-Edite o `appsettings.json` dentro da pasta `AIChatApp.Api`:
+Edite o arquivo `AIChatApp.Api/appsettings.json`:
 
 ```json
 {
@@ -44,27 +41,50 @@ Edite o `appsettings.json` dentro da pasta `AIChatApp.Api`:
 }
 ```
 
-### Rode com Docker Compose:
+### 3. Executar com Docker Compose
 
-#### Ambiente de desenvolvimento:
+#### 🔧 Ambiente de desenvolvimento (porta 5000, Swagger habilitado):
 
 ```bash
 docker compose --profile dev up --build
 ```
 
-➡ Acesse a API em: [http://localhost:5000/swagger](http://localhost:5000/swagger)
+➡ Acesse: [http://localhost:5000/swagger](http://localhost:5000/swagger)
 
-#### Ambiente de produção:
+#### 🚀 Ambiente de produção (porta 8080, sem Swagger):
 
 ```bash
 docker compose --profile prod up --build
 ```
 
-➡ API em produção via `http://localhost:8080`
+➡ Acesse: [http://localhost:8080](http://localhost:8080)
 
 ---
 
-## 🔧 Execução sem Docker (manual)
+## 🐳 Execução manual com Docker (sem Compose)
+
+### Build da imagem:
+
+```bash
+docker build -t aichatapp .
+```
+
+### Executar em modo desenvolvimento (Swagger habilitado):
+
+```bash
+docker run -e ASPNETCORE_ENVIRONMENT=Development -p 5000:80 aichatapp
+```
+
+➡ Acesse: [http://localhost:5000/swagger](http://localhost:5000/swagger)
+
+---
+
+## 🔧 Execução local sem Docker
+
+### Pré-requisitos:
+- .NET SDK 8.0 instalado
+
+### Comando:
 
 ```bash
 cd AIChatApp.Api
@@ -108,9 +128,11 @@ AIChatApp.sln
 
 ---
 
-## 📦 Docker Compose
+## 📦 docker-compose.yml
 
 ```yaml
+version: "3.9"
+
 services:
   aichatapp:
     build: .
@@ -143,13 +165,11 @@ services:
 
 ## 🧠 Autor
 
-Desenvolvido por [Wandrey Mundin](https://github.com/seu-usuario)  
-Apresentado na [DEVCON 2025](https://devcon.com)
+Desenvolvido por [Wandrey Mundin](https://github.com/wandreymundin)  
+Apresentado na [DEVCON 2025](https://devcon.dev.br)
 
 ---
 
 ## 📜 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
-
-```
