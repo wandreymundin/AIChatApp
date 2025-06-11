@@ -1,7 +1,7 @@
-## ?? `README.md` (com badges e visual GitHub-Friendly)
+## 📄 `README.md` (com badges e visual GitHub-Friendly)
 
 ```markdown
-# ?? AIChatApp ? C# + OpenAI + Docker
+# 🤖 AIChatApp – C# + OpenAI + Docker
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-green)
@@ -12,20 +12,20 @@
 
 ---
 
-## ? Funcionalidades
+## ✨ Funcionalidades
 
-- ? API com `.NET 8` e Minimal APIs
-- ? Integra��o com OpenAI (ChatGPT)
-- ? Organiza��o em camadas (Domain, Application, Infrastructure, Api)
-- ? Suporte a perfis `Development` e `Production`
-- ? Swagger UI ativado no modo dev
-- ? Docker e Docker Compose com profiles
+- ✅ API com `.NET 8` e Minimal APIs
+- ✅ Integração com OpenAI (ChatGPT)
+- ✅ Organização em camadas (Domain, Application, Infrastructure, Api)
+- ✅ Suporte a perfis `Development` e `Production`
+- ✅ Swagger UI ativado no modo dev
+- ✅ Docker e Docker Compose com profiles
 
 ---
 
-## ?? Execu��o com Docker
+## 🚀 Execução com Docker
 
-### Clone o reposit�rio:
+### Clone o repositório:
 
 ```bash
 git clone https://github.com/seu-usuario/aichatapp.git
@@ -52,37 +52,37 @@ Edite o `appsettings.json` dentro da pasta `AIChatApp.Api`:
 docker compose --profile dev up --build
 ```
 
-? Acesse a API em: [http://localhost:5000/swagger](http://localhost:5000/swagger)
+➡ Acesse a API em: [http://localhost:5000/swagger](http://localhost:5000/swagger)
 
-#### Ambiente de produ��o:
+#### Ambiente de produção:
 
 ```bash
 docker compose --profile prod up --build
 ```
 
-? API em produ��o via `http://localhost:8080`
+➡ API em produção via `http://localhost:8080`
 
 ---
 
-## ?? Execu��o sem Docker (manual)
+## 🔧 Execução sem Docker (manual)
 
 ```bash
 cd AIChatApp.Api
 dotnet run
 ```
 
-? Acesse: [https://localhost:5001/swagger](https://localhost:5001/swagger)
+➡ Acesse: [https://localhost:5001/swagger](https://localhost:5001/swagger)
 
 ---
 
-## ?? Exemplo de requisi��o
+## 🔄 Exemplo de requisição
 
 ```http
 POST /ask
 Content-Type: application/json
 
 {
-  "question": "C# � uma boa linguagem?"
+  "question": "C# é uma boa linguagem?"
 }
 ```
 
@@ -90,25 +90,25 @@ Content-Type: application/json
 
 ```json
 {
-  "answer": "Sim, C# � uma linguagem de programa��o popular e eficiente..."
+  "answer": "Sim, C# é uma linguagem de programação popular e eficiente..."
 }
 ```
 
 ---
 
-## ??? Estrutura do Projeto
+## 🗂️ Estrutura do Projeto
 
 ```
 AIChatApp.sln
-??? AIChatApp.Api/           ? Minimal API (Program.cs)
-??? AIChatApp.Application/   ? L�gica de orquestra��o (servi�os)
-??? AIChatApp.Infrastructure/? Integra��es externas (OpenAI)
-??? AIChatApp.Domain/        ? DTOs e configura��es
+├── AIChatApp.Api/           → Minimal API (Program.cs)
+├── AIChatApp.Application/   → Lógica de orquestração (serviços)
+├── AIChatApp.Infrastructure/→ Integrações externas (OpenAI)
+├── AIChatApp.Domain/        → DTOs e configurações
 ```
 
 ---
 
-## ?? Docker Compose
+## 📦 Docker Compose
 
 ```yaml
 services:
@@ -133,23 +133,23 @@ services:
 
 ---
 
-## ?? Sobre a OpenAI
+## 💡 Sobre a OpenAI
 
 - Plataforma oficial: [https://platform.openai.com](https://platform.openai.com)
 - API usada: `https://api.openai.com/v1/chat/completions`
-- � necess�rio possuir uma chave de API v�lida e com cr�ditos
+- É necessário possuir uma chave de API válida e com créditos
 
 ---
 
-## ?? Autor
+## 🧠 Autor
 
 Desenvolvido por [Wandrey Mundin](https://github.com/seu-usuario)  
 Apresentado na [DEVCON 2025](https://devcon.com)
 
 ---
 
-## ?? Licen�a
+## 📜 Licença
 
-Este projeto est� licenciado sob a [MIT License](LICENSE).
+Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ```
